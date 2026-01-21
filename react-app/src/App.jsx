@@ -10,7 +10,7 @@ function App() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(async function success(position) {
         const { latitude, longitude } = position.coords
-        const gotDataJson = await fetch('https://geo-loc-backend-5kwt.vercel.app/', {
+        const gotDataJson = await fetch('https://geo-loc-backend-5kwt.vercel.app/geolocation', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ latitude, longitude })
